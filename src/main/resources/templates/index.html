@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Demo</title>
-    <meta name="description" content=""/>
-    <meta name="viewport" content="width=device-width"/>
-    <base href="/"/>
+    <title>Hello AngularJS</title>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/webjars/angularjs/1.4.3/angular.js"></script>
+    <script src="hello.js"></script>
 </head>
-<body>
-<h1>Demo</h1>
-<div class="container"></div>
+
+<body ng-app="hello">
+<div class="container">
+    <div ng-controller="home as home" ng-cloak class="ng-cloak">
+        <p>The ID is {{home.greeting.id}}</p>
+        <p>The content is {{home.greeting.content}}</p>
+    </div>
+</div>
+
 </body>
 </html>
